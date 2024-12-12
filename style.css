@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.con{
+    /* margin: 5px; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-con{
+    height: 100vh;
+    width:50%;
+    border: 2px solid rgb(3, 3, 3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+h1{
+    margin-top: 20px;
+    font-size: 36px;
+    text-decoration: underline dotted rebeccapurple;
+}
+
+.right-con{
+    height: 100vh;
+    width:50%;
+    border: 2px solid rgb(12, 12, 12);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.box-l{
+    height: 350px;
+    width: 350px;
+    background-color: rgb(195, 73, 233);
+    transition: background-color 2s ease, transform 3s ease-in,box-shadow 2s linear,background-image 3s ease-out;
+    animation: fade-in 2s reverse;
+}
+
+.box-l:hover{
+    background-color: plum;
+    transform: scale(1.2);
+    box-shadow: 10px 10px 10px purple;
+    background-image: linear-gradient(pink, rgb(245, 86, 245),rgb(156, 52, 156),purple);
+}
+
+
+.box-r{
+    height: 350px;
+    width: 350px;
+    background-color: rgb(195, 73, 233);
+    animation: rotate 3s infinite, bounce 2s ease,color-scale 2s infinite;
+}
+
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    50%{
+        transform: rotate(360deg);
+    }
+
+    100%{
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes bounce{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateY(50px);
+    }
+    100%{
+        transform: translateX(100px);
+    }
+}
+
+@keyframes color-scale{
+    0%{
+        background-color: pink;
+    }
+    25%{
+        background-color: rgb(245, 86, 245);
+    }
+    50%{
+       background-color: rgb(156, 52, 156);
+    }
+    100%{
+        background-color: purple;
+    }
+}
+
